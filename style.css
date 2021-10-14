@@ -1,0 +1,99 @@
+body {
+  display: flex; /*perfectly fits in a given space>*/
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /*px? vh? research what these stand for*/
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(5, 5, 5);
+  background-image: url("https://source.unsplash.com/1920x1080/?nature,landscape");
+}
+
+.card {
+  /*what is being selected from html, "the card"*/
+  background: rgba(0, 0, 0, 0.945);
+  color: rgb(255, 244, 244);
+  padding: 2em;
+  border-radius: 30px; /*creates rounded edges*/
+  width: 100%; /* why is it important to have this set at 100%?*/
+  max-width: 420px; /* set as a parameter, creates max*/
+  margin: 1em;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+input.search-bar {
+  background: rgba(27, 27, 27, 0.397);
+  border: none;
+  padding: 0.5em 2em;
+  border-radius: 24px;
+  color: white;
+  font-family: inherit;
+  width: calc(100% - 150px);
+}
+
+button {
+  margin: 0.5em;
+  border: none;
+  height: 23px;
+  width: 56px;
+  border-radius: 10%;
+  color: #e0dcdc;
+  background: #0c0c0c;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  /*not executing*/
+  background: #707070bb;
+}
+
+h2 {
+  font-size: 19.5px;
+}
+
+h1 {
+  font-size: 19.5px;
+  margin: 0;
+}
+
+div {
+  font-size: 14px;
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+}
+
+.humidity {
+  padding-top: 0.4em;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visibile;
+  content: "Loading . . .";
+  color: white;
+  position: absolute;
+  top: 0; 
+}
